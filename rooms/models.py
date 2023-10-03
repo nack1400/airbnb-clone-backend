@@ -1,14 +1,15 @@
 from django.db import models
+from common.models import CommonModel
 
 
-class Room(models.Model):
+class Room(CommonModel):
 
     """Room Model Definition"""
 
     class RoomKindChoices(models.TextChoices):
         ENTIRE_PLACE = ("entire_place", "Entire Place")
         PRIVATE_ROOM = ("private_room", "Private Room")
-        SHARED_ROOM = "shared_room", "Shared Room"
+        SHARED_ROOM = ("shared_room", "Shared Room")
 
     country = models.CharField(
         max_length=50,
@@ -36,9 +37,12 @@ class Room(models.Model):
         "users.User",
         on_delete=models.CASCADE,
     )
+    amenities = models.ManyToManyField(
+        "rooms.Amenity",
+    )
 
 
-class Amenity(models.Model):
+class Amenity(CommonModel):
 
     """Amenity Definiton"""
 
@@ -48,4 +52,5 @@ class Amenity(models.Model):
     description = models.CharField(
         max_length=150,
         null=True,
+        blank=True,
     )
