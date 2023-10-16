@@ -1,0 +1,14 @@
+{
+  "name": "House",
+  "country": "한국",
+  "price": "2",
+  "city": "서울",
+  "rooms": "1",
+  "toilets": "2",
+  "description": "ROO ADD CATEGORY!",
+  "address": "123",
+  "pet_friendly": "true",
+  "category": "1",
+  "amenities": [1, 2, 3],
+  "kind": "private_room"
+}
