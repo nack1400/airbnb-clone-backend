@@ -1,14 +1,17 @@
-{
-  "name": "House",
-  "country": "한국",
-  "price": "2",
-  "city": "서울",
-  "rooms": "1",
-  "toilets": "2",
-  "description": "ROO ADD CATEGORY!",
-  "address": "123",
-  "pet_friendly": "true",
-  "category": "1",
-  "amenities": [1, 2, 3],
-  "kind": "private_room"
-}
+[
+  {
+    "name": "House123",
+    "country": "한국",
+    "price": "2",
+    "city": "서울",
+    "rooms": "1",
+    "toilets": "2",
+    "description": "ROO ADD CATEGORY!",
+    "address": "123",
+    "pet_friendly": "true",
+    "category": "1",
+    "amenities": [1, 2],
+    "kind": "private_room"
+  },
+  { "file": "http://127.0.0.1:8000/api/v1/rooms/1/photos", "description": "w" }
+]

@@ -54,9 +54,15 @@ CUSTOM_APPS = [
 
 THIRD_PARTY_APPS = [
     "rest_framework",
+    "drf_yasg",
 ]
 
 INSTALLED_APPS = SYSTEM_APPS + CUSTOM_APPS + THIRD_PARTY_APPS
+
+SWAGGER_SETTINGS = {
+    "USE_SESSION_AUTH": False,
+    "JSON_EDITOR": True,
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
