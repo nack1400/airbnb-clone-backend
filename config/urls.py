@@ -35,13 +35,15 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/v1/rooms/", include("rooms.urls")),
-    path("api/v1/categories/", include("categories.urls")),
-    path("api/v1/experiences/", include("experiences.urls")),
-    path("api/v1/medias/", include("medias.urls")),
     path(
         "api/v1/docs/",
         schema_view.with_ui("swagger", cache_timeout=0),
         name="schema-swagger-ui",
     ),
+    path("api/v1/rooms/", include("rooms.urls")),
+    path("api/v1/categories/", include("categories.urls")),
+    path("api/v1/experiences/", include("experiences.urls")),
+    path("api/v1/medias/", include("medias.urls")),
+    path("api/v1/wishlists", include("wishlists.urls")),
+    path("api/v1/wishlists/", include("wishlists.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
