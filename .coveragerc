@@ -1,0 +1,10 @@
+[run]
+source = .  # 소스 코드가 있는 디렉토리 설정 (현재 디렉토리 기준)
+
+[report]
+exclude_lines =
+    pragma: no cover
+    raise NotImplementedError
+    if __name__ == .__main__.:
+omit =
+    */venv/*  # 가상환경 디렉토리는 커버리지 측정에서 제외
